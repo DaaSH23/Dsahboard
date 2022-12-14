@@ -1,0 +1,473 @@
+body {
+    height: 100rem;
+    background-color: aliceblue;
+    background-image: 
+        radial-gradient(
+            rgb(197, 197, 255),
+            #ffffff
+        );
+
+        text-rendering: optimizeLegibility;
+
+        -webkit-font-smoothing: antialiased;
+        
+        -moz-osx-font-smoothing: grayscale;
+}
+
+.quote {
+    margin-top: 6rem;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    color: #000;
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.quote .hj {
+    color: rgb(50, 54, 88);
+    text-decoration: underline rgb(189, 198, 177) 10px;
+
+}
+
+.subhead {
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(96, 99, 119);
+    font-size: 18px;
+    font-weight: 500;
+
+}
+
+/* Image overview */
+.pichead {
+    /* display: flex; */
+    position: relative;
+    margin-top: 4rem;
+    text-align: center;
+    height: auto;
+    margin-bottom: 10rem;
+}
+.image{
+    opacity: 1;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 65%;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+    0 10px 10px rgba(0,0,0,0.22);
+}
+.arrow{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.arrow .dash img{
+    width: 6%;
+    margin-top: -57rem;
+    margin-left: 52rem;
+}
+.arrow .dash span{
+    position: absolute;
+    margin-top: -31rem;
+    margin-left: -4rem;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.arrow .charts img{
+    width: 6%;
+    margin-left: 94rem;
+    margin-top: -25rem;
+    transform: rotate(50deg);
+}
+.arrow .charts span{
+    position: absolute;
+    margin-top: -17rem;
+    margin-left: -10rem;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.arrow .share img{
+    width: 6%;
+    margin-top: -68rem;
+    margin-left: 129rem;
+    transform: rotate(150deg);
+}
+.arrow .share span{
+    position: absolute;
+    margin-top: -32rem;
+    margin-left: 65rem;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 500;    
+}
+.arrow .layout img{
+    width: 6%;
+    margin-top: -13rem;
+    margin-left: 45rem;
+    transform: rotate(170deg);
+}
+.arrow .layout span{
+    position: absolute;
+    margin-top: -5rem;
+    margin-left: -1rem;
+    color: #000000;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 500;  
+}
+.pichead:hover .image {
+    opacity: 0.3;
+}
+.pichead:hover .arrow {
+    opacity: 1;
+}
+
+
+/* SignIn & Registration Process */
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+h2 {
+	text-align: center;
+}
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 10px 0 10px;
+}
+span {
+	font-size: 12px;
+}
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid rgb(67, 72, 113);
+	background-color: rgb(67, 72, 113);
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+/* button:focus {
+	outline: none;
+} */
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/* padding: 0 50px; */
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+#container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 80%;
+	max-width: 100%;
+    min-height: 600px;
+	/* min-height: 480px; */
+}
+
+.form-container {
+	position: absolute;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	width: 50%;
+    opacity: 1;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(0%);
+}
+
+.sign-up-container {
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: rgb(50, 54, 88);
+	background: -webkit-linear-gradient(to right, rgb(50, 54, 88), rgb(65, 70, 114));
+	background: linear-gradient(to right, rgb(50, 54, 88), rgb(65, 70, 114));
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+/* Registration */
+
+#regForm {
+    background-color: #ffffff;
+    margin: 50px auto;
+    font-family: Raleway;
+    padding: 0px;
+    width: 50%;
+    min-width: 300px;
+}
+
+.tab p{
+    min-width: 300px;
+}
+  
+.tab input {
+    /* padding: 10px; */
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    /* border: 1px solid #aaaaaa; */
+}
+  
+  /* Mark input boxes that gets an error on validation: */
+input.invalid {
+    background-color: #ffdddd;
+}
+  
+  /* Hide all steps by default: */
+.tab {
+    display: none;
+}
+  
+button:hover {
+    opacity: 0.8;
+}
+  
+#prevBtn {
+    background-color: #bbbbbb;
+}
+
+  /* Make circles that indicate the steps of the form: */
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #000000;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+.step.active {
+    opacity: 1;
+}
+
+.r1, .r2 {
+    padding: 0px 50px;
+    justify-content: center;
+    /* width: 100%; */
+    min-width: 50px;
+    /* max-height: 200px; */
+}
+
+.r1 img, .r2 img {
+    padding: 0;
+    width: 80%;
+}
+
+.r1 .widpic img{
+    margin-top: 1.5rem;
+    margin-left: 8rem;
+    width: 55%;
+}
+
+.r2{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+
+.widfeat {
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    color: rgb(50, 54, 88);
+    /* margin-bottom: 5rem; */
+    /* text-transform: uppercase; */
+}
+.widq{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(96, 99, 119);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5rem;
+}
+.cla,.dat,.cht,.frm{
+    margin-top: 0.5rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(96, 99, 119);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.widfeat span{
+    font-family: 'Rubik', sans-serif;
+    font-size: 40px;
+    color: rgb(204, 54, 112);
+}
+
+@media only screen and (max-width: 1460px) {
+    .pichead:hover .image {
+        opacity: 1;
+    }
+    .pichead:hover .arrow {
+        opacity: 0;
+    }
+  }
+
+  @media only screen and (min-width: 1550px) {
+    .pichead:hover .image {
+        opacity: 1;
+    }
+    .pichead:hover .arrow {
+        opacity: 0;
+    }
+  }
